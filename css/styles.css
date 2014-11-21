@@ -13,9 +13,13 @@
     float: left;
 }
 .hero {
+    width: 18px;
+    height: 18px;
     background-color: #EE0000;
 }
 .enemy {
+    width: 18px;
+    height: 18px;
     background-color: #000000;
 }
 

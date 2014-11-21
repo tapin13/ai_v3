@@ -1,1 +1,1 @@
-Simple AI
+Simple AI Game on JavaScript
