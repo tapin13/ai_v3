@@ -1,0 +1,34 @@
+.square {
+    width: 400px;
+    height: 400px;
+    background-color: #EAEAEA;
+    border: 1px solid #AAAAAA;
+}
+
+.cell {
+    width: 18px;
+    height: 18px;
+    background-color: #EEEEEE;
+    border: 1px solid #CCCCCC;
+    float: left;
+}
+.hero {
+    background-color: #EE0000;
+}
+.enemy {
+    background-color: #000000;
+}
+
+#gameover {
+    display: none;
+    background: none repeat scroll 0 0 #FFFFFF;
+    box-shadow: 0 4px 13px -5px #000000;
+    font-size: 40px;
+    left: 70px;
+    margin: 10px;
+    opacity: 0.8;
+    padding: 10px;
+    position: absolute;
+    top: 100px;
+    z-index: 2;
+}
