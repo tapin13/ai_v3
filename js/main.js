@@ -3,7 +3,7 @@ $( document ).ready(function() {
     startGame();
     
     document.onkeydown = function(e) {
-        if(hero.x == enemy.x && hero.y == enemy.y) { // game over
+        if(gameover == true) { // game over
             return false;
         }
         
@@ -32,10 +32,16 @@ $( document ).ready(function() {
 });
 
 var hero = new Hero();
+
 var enemy = new Enemy();
+var enemy2 = new Enemy();
+
+var gameover = false;
 
 function startGame() {
     $("#gameover").hide();
+    $("#square div").removeClass('enemy');
+    gameover = false;
 
     hero.x = getRand(19);
     hero.y = getRand(19);
@@ -46,11 +52,13 @@ function startGame() {
     enemy.draw();
 
     var searchNdestroyInterval = setInterval(function() {
-        if(enemy.searchNdestroy()) {
-            enemy.draw();
-        } else {
+        enemy.searchNdestroy();
+        enemy.draw();
+        
+        if(hero.x == enemy.x && hero.y == enemy.y) {
             clearInterval(searchNdestroyInterval);
             $("#gameover").show();
+            gameover = true;
         }
     }, 1000);
 }
